@@ -1,0 +1,180 @@
+X<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>João Gonçalves · Portfolio</title>
+<meta name="description" content="João Gonçalves, Computer Engineering graduate from UTAD. Projects, experience and contact.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#f7f7f4; --surface:#ffffff; --text:#1b1d1f; --muted:#5d636b; --line:#e3e3dd;
+  --accent:#1f5f8b; --accent-soft:#e6eff5; --tag:#f0f0ea;
+}
+@media (prefers-color-scheme: dark){
+  :root{ --bg:#111315; --surface:#181b1e; --text:#e8e9ea; --muted:#9aa1a8; --line:#2a2e33;
+    --accent:#7db4dc; --accent-soft:#1c2a35; --tag:#22262a; }
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--text);font:16px/1.6 Inter,system-ui,-apple-system,Segoe UI,sans-serif;-webkit-font-smoothing:antialiased}
+a{color:var(--accent);text-decoration:none}
+a:hover{text-decoration:underline}
+.wrap{max-width:860px;margin:0 auto;padding:0 20px}
+nav{position:sticky;top:0;z-index:5;background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+nav .wrap{display:flex;justify-content:space-between;align-items:center;height:56px}
+nav .brand{font-weight:700;color:var(--text)}
+nav ul{display:flex;gap:20px;list-style:none;margin:0;padding:0;font-size:14px}
+nav ul a{color:var(--muted)}
+header{padding:72px 0 48px}
+.eyebrow{font:500 13px/1 "JetBrains Mono",monospace;color:var(--accent);letter-spacing:.04em;text-transform:uppercase}
+h1{font-size:clamp(34px,6vw,48px);line-height:1.1;margin:14px 0 16px;letter-spacing:-.02em}
+.lead{font-size:18px;color:var(--muted);max-width:620px;margin:0}
+.cta{display:flex;flex-wrap:wrap;gap:10px;margin-top:28px}
+.btn{display:inline-block;padding:10px 16px;border-radius:8px;border:1px solid var(--line);background:var(--surface);color:var(--text);font-weight:500;font-size:15px}
+.btn.primary{background:var(--accent);border-color:var(--accent);color:#fff}
+@media (prefers-color-scheme: dark){.btn.primary{color:#0d1216}}
+.btn:hover{text-decoration:none;filter:brightness(1.05)}
+section{padding:40px 0;border-top:1px solid var(--line)}
+h2{font-size:14px;font-weight:600;color:var(--muted);text-transform:uppercase;letter-spacing:.08em;margin:0 0 24px}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:22px 24px;margin-bottom:16px}
+.card h3{margin:0;font-size:19px}
+.meta{font-size:14px;color:var(--muted);margin:4px 0 12px}
+.card p{margin:0 0 12px}
+.card ul{margin:0 0 12px;padding-left:20px}
+.card li{margin:4px 0}
+.tags{display:flex;flex-wrap:wrap;gap:6px;margin-top:4px}
+.tag{font:500 12px/1 "JetBrains Mono",monospace;background:var(--tag);color:var(--muted);padding:6px 8px;border-radius:6px}
+.note{font-size:13px;color:var(--muted);background:var(--accent-soft);border-radius:8px;padding:8px 12px;margin-top:12px}
+.status{font:500 12px/1 "JetBrains Mono",monospace;color:var(--accent);background:var(--accent-soft);padding:4px 8px;border-radius:6px;margin-left:8px;vertical-align:middle;white-space:nowrap}
+.row{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;align-items:baseline}
+.timeline .item{padding:0 0 20px 20px;border-left:2px solid var(--line);position:relative}
+.timeline .item:before{content:"";position:absolute;left:-6px;top:6px;width:10px;height:10px;border-radius:50%;background:var(--accent)}
+.timeline h3{margin:0;font-size:17px}
+.timeline p{margin:4px 0 0;color:var(--muted)}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+@media (max-width:640px){.grid2{grid-template-columns:1fr} nav ul{gap:12px} nav ul li.hide-sm{display:none}}
+footer{padding:40px 0 60px;border-top:1px solid var(--line);color:var(--muted);font-size:14px}
+</style>
+</head>
+<body>
+<nav><div class="wrap">
+  <a class="brand" href="#top">João Gonçalves</a>
+  <ul>
+    <li><a href="#projects">Projects</a></li>
+    <li><a href="#experience">Experience</a></li>
+    <li class="hide-sm"><a href="#education">Education</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+</div></nav>
+
+<main class="wrap" id="top">
+<header>
+  <div class="eyebrow">Computer Engineering · UTAD</div>
+  <h1>João Gonçalves</h1>
+  <p class="lead">Computer Engineering graduate from Portugal who likes building complete, working products, from the database to the page a real user sees. Erasmus in Warsaw, English C2, and years of customer-facing work.</p>
+  <div class="cta">
+    <a class="btn primary" href="#projects">See projects</a>
+    <a class="btn" href="https://www.linkedin.com/in/joao-goncalves-dev/" target="_blank" rel="noopener">LinkedIn</a>
+    <a class="btn" href="mailto:joaoplg2003@gmail.com">Email</a>
+  </div>
+</header>
+
+<section id="projects">
+  <h2>Projects</h2>
+
+  <article class="card">
+    <h3>PTM-NONIO · Automated Tutoring &amp; Mentoring Platform</h3>
+    <div class="meta">Final-year project, UTAD · team of two · 2026</div>
+    <p>The university's tutoring and mentoring programme was coordinated by hand in spreadsheets, repeated for every enrolment phase. PTM-NONIO automates it end to end.</p>
+    <ul>
+      <li>Assignment algorithm by course and enrolment phase that balances load across mentors and respects capacity limits</li>
+      <li>Backtracking search to maximise overall student–mentor compatibility, plus a weighted mentor recommendation engine</li>
+      <li>Session scheduling, feedback collection and aggregated metrics for coordinators</li>
+      <li>REST API with JWT authentication, role-based access and automated functional tests</li>
+    </ul>
+    <div class="tags"><span class="tag">ASP.NET Core</span><span class="tag">C#</span><span class="tag">EF Core</span><span class="tag">SQLite</span><span class="tag">JWT</span></div>
+    <div class="note">Built with AI-assisted development (Claude): I defined the requirements, guided the implementation and reviewed and tested the result.</div>
+  </article>
+
+  <article class="card">
+    <h3>ImoGest · Property Management Web App</h3>
+    <div class="meta">Web Applications &amp; Databases Lab, UTAD · 2026</div>
+    <p>Full-stack platform for buying, selling and renting properties.</p>
+    <ul>
+      <li>Three user roles (Admin, Seller, Buyer) with ASP.NET Identity and role-based authorisation</li>
+      <li>Property listings with image upload and validation, pagination and sorting</li>
+      <li>Relational model designed from an E-R diagram and implemented with Entity Framework Core</li>
+    </ul>
+    <div class="tags"><span class="tag">ASP.NET Core MVC</span><span class="tag">C#</span><span class="tag">EF Core</span><span class="tag">SQLite</span><span class="tag">Bootstrap 5</span></div>
+    <div class="note">Built with AI-assisted development (Claude): I defined the requirements, guided the implementation and reviewed and tested the result.</div>
+  </article>
+
+  <article class="card">
+    <h3>Guesthouse Website &amp; Booking Engine <span class="status">in progress</span></h3>
+    <div class="meta">Freelance · Quinta dos Caseiros do Paço de Giela · 2026</div>
+    <p>A new bilingual website with direct online booking for the rural guesthouse where I work in customer service every summer.</p>
+    <ul>
+      <li>Real-time availability per house and server-side price calculation</li>
+      <li>Online payments with Stripe Checkout and signed webhooks, with protection against double bookings</li>
+      <li>Password-protected admin page for bookings, date blocks and messages</li>
+    </ul>
+    <div class="tags"><span class="tag">Node.js</span><span class="tag">Express</span><span class="tag">SQLite</span><span class="tag">Stripe</span><span class="tag">HTML/CSS/JS</span></div>
+    <div class="note">Built with AI-assisted development (Claude): I defined the requirements, guided the implementation and reviewed and tested the result.</div>
+  </article>
+
+  <article class="card">
+    <h3>Wearnare · Online Store</h3>
+    <div class="meta">Freelance · 2026</div>
+    <p>Built the Wearnare online store on Shopify: store setup, theme and design customisation, product catalogue organisation and launch preparation.</p>
+    <div class="tags"><span class="tag">Shopify</span><span class="tag">E-commerce</span></div>
+  </article>
+</section>
+
+<section id="experience">
+  <h2>Experience</h2>
+  <div class="timeline">
+    <div class="item">
+      <div class="row"><h3>E-commerce Developer (Shopify) · Wearnare</h3><span class="meta">2026 – present</span></div>
+      <p>Freelance, remote. Set up and launched the brand's online store.</p>
+    </div>
+    <div class="item">
+      <div class="row"><h3>Café Attendant</h3><span class="meta">Summer 2026 · 1 month</span></div>
+      <p>Ran a café single-handedly from opening to closing: table service, customers and payments.</p>
+    </div>
+    <div class="item">
+      <div class="row"><h3>Customer Service · Quinta dos Caseiros do Paço de Giela</h3><span class="meta">Summers, 2022 – present</span></div>
+      <p>Front-of-house and guest support at a rural guesthouse in Arcos de Valdevez.</p>
+    </div>
+  </div>
+</section>
+
+<section id="education">
+  <h2>Education &amp; languages</h2>
+  <div class="grid2">
+    <div class="card">
+      <h3>BSc Computer Engineering</h3>
+      <div class="meta">Universidade de Trás-os-Montes e Alto Douro · 2021 – 2026</div>
+      <p>Software engineering, web development, databases and numerical methods.</p>
+    </div>
+    <div class="card">
+      <h3>Erasmus+ Exchange</h3>
+      <div class="meta">Warsaw University of Life Sciences (SGGW) · Oct 2025 – Feb 2026</div>
+      <p>Monetary Policy, Financial Engineering and IT Systems, taught in English. Travelled across Europe during the exchange.</p>
+    </div>
+  </div>
+  <div class="card">
+    <div class="row"><h3>Languages</h3></div>
+    <p style="margin-top:8px">Portuguese (native) · English (C2, EF SET 72/100) · Spanish (basic)</p>
+  </div>
+</section>
+</main>
+
+<footer id="contact"><div class="wrap">
+  <p style="margin:0 0 8px;color:var(--text);font-weight:600">Get in touch</p>
+  <p style="margin:0"><a href="mailto:joaoplg2003@gmail.com">joaoplg2003@gmail.com</a> · <a href="https://www.linkedin.com/in/joao-goncalves-dev/" target="_blank" rel="noopener">LinkedIn</a> · Arcos de Valdevez, Portugal</p>
+</div></footer>
+</body>
+</html>
